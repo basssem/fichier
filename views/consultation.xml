@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- consultation -->
+      <record id="view_registre_tree" model="ir.ui.view">
+            <field name="name">registre patient</field>
+            <field name="model">consultation.patient</field>
+          <field name="arch" type="xml">
+                <tree>
+
+                     <field name="dateConsulation"/>
+                     <field name="diadnostique"/>
+                     <field name="examenClinique"/>
+                     <field name="ordonnanceligne_consultation_id"/>
+                     <field name="acte_id" widget="many2many_tags" options="{'no_create_edit': True}"/>
+                     <field name="radio_id" widget="many2many_binary" options="{'no_create_edit': True}"/>
+
+
+                </tree>
+            </field>
+        </record>
+       <record id="view_registre_form" model="ir.ui.view">
+            <field name="name">registre patient.form</field>
+            <field name="model">consultation.patient</field>
+          <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+
+                     <field name="dateConsulation"/>
+                     <field name="diadnostique"/>
+                     <field name="examenClinique"/>
+                     <field name="ordonnanceligne_consultation_id"/>
+
+                        </group>
+                        <group>
+
+                        </group>
+                        <group>
+                             <field name="acte_id" widget="many2many_tags"/>
+                            <field name="radio_id" widget="many2many_binary" options="{'no_create_edit': True}"/>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

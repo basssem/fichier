@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+<!-- acte
+      <record id="action_acte_form" model="ir.actions.act_window">
+            <field name="name">acte action</field>
+            <field name="res_model">acte.patient</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                ajouter un acte
+              </p><p>
+              vous pouvez ajouter un pour commencer
+              </p>
+            </field>
+    </record>
+            <record id="view_acte_form" model="ir.ui.view">
+            <field name="name">acte patient.form</field>
+            <field name="model">acte.patient</field>
+            <field name="arch" type="xml">
+
+<form>
+
+     <field name="nomActe"/>
+                     <field name="id"/>
+
+
+
+</form>
+
+            </field>
+        </record>
+
+         <record id="view_acte_tree" model="ir.ui.view">
+            <field name="name">acte patient</field>
+            <field name="model">acte.patient</field>
+            <field name="arch" type="xml">
+
+<tree>
+                     <field name="nomActe"/>
+                     <field name="id"/>
+
+
+</tree>
+
+            </field>
+        </record>
+-->
+    </data>
+    </odoo>

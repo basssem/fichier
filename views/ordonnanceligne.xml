@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- consultation -->
+             <record id="view_ordonnanceligne_tree" model="ir.ui.view">
+            <field name="name">ordonnanceligne tree patient</field>
+            <field name="model">ordonnanceligne.patient</field>
+          <field name="arch" type="xml">
+
+
+                     <tree>
+
+                    <field name="ordonnance_ordonnanceligne_id" />
+
+
+                     </tree>
+
+
+          </field>
+  </record>
+        <record id="view_ordonnanceligne_form" model="ir.ui.view">
+            <field name="name">ordonnanceligne patient</field>
+            <field name="model">ordonnanceligne.patient</field>
+          <field name="arch" type="xml">
+
+
+                     <form>
+
+                    <field name="ordonnance_ordonnanceligne_id" />
+
+
+                     </form>
+
+
+          </field>
+  </record>
+
+
+
+    </data>
+</odoo>

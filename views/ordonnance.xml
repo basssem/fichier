@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- consultation -->
+           <record id="view_ordonnance_tree" model="ir.ui.view">
+            <field name="name">ordonnance  tree patient</field>
+            <field name="model">ordonnance.patient</field>
+          <field name="arch" type="xml">
+
+
+                     <tree  editable="bottom">
+
+                    <field name="medicament_ordonnance_id">
+
+                    </field>
+
+
+                    <field name="dosage" />
+                    <field name="duree" />
+
+                     </tree>
+
+
+          </field>
+  </record>
+        <record id="view_ordonnance_form" model="ir.ui.view">
+            <field name="name">ordonnance patient</field>
+            <field name="model">ordonnance.patient</field>
+          <field name="arch" type="xml">
+
+
+                     <form>
+
+                    <field name="medicament_ordonnance_id" />
+                    <field name="dosage" />
+                    <field name="duree" />
+
+                     </form>
+
+
+          </field>
+  </record>
+
+
+
+    </data>
+</odoo>

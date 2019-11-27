@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <record id="patient_calendar_form_view_crm" model="ir.ui.view">
+                <field name="name">patient.calendar.meetings.inherit</field>
+                <field name="model">calendar.event</field>
+                <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
+                <field name="priority">1</field>
+                <field name="arch" type="xml">
+
+
+                       <xpath expr="//page[@name='page_misc']" position="attributes">
+                         <attribute name="invisible">True</attribute>
+            </xpath>
+
+                      <xpath expr="//page[@name='page_invitations']" position="attributes">
+                         <attribute name="invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='page_options']" position="attributes">
+                         <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='categ_ids']" position="attributes">
+                        <attribute name="invisible">True</attribute>
+            </xpath>
+             <xpath expr="//field[@name='location']" position="replace">
+
+            </xpath>
+
+            <xpath expr="//field[@name='partner_ids']" position="replace">
+                <field name="rdv_patient_id" />
+            </xpath>
+
+
+                </field>
+   </record>
+    <record id="patient_calendar_event_view_crm" model="ir.ui.view">
+                <field name="name">patient.calendar.event.inherit</field>
+                <field name="model">calendar.event</field>
+                <field name="inherit_id" ref="calendar.view_calendar_event_calendar"/>
+                <field name="priority">2</field>
+                <field name="arch" type="xml">
+                  <xpath expr="//field[@name='partner_ids']" position="replace">
+
+                <field name="rdv_patient_id"/>
+            </xpath>
+
+                </field>
+    </record>
+
+
+</odoo>

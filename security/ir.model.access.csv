@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fichier_patient,fichier.patient,model_fichier_patient,,1,1,1,1
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_registre_patient,registre.patient,model_registre_patient,,1,1,1,1

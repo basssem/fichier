@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="partner_view_button_contracts_patient_count">
+            <field name="name">partner.patient.view.button.contracts_count</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.partner_view_button_contracts_count" />
+            <field name="priority" eval="14"/>
+ <field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]"/>
+            <field name="arch" type="xml">
+                  <xpath expr="//button[@name='%(account.action_open_partner_analytic_accounts)d']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            </field>
+        </record>
+   <record id="patient_partner_form_view" model="ir.ui.view">
+                <field name="name">patient.form.form.inherit</field>
+                <field name="model">res.partner</field>
+                <field name="inherit_id" ref="base.view_partner_form"/>
+                <field name="priority">12</field>
+                <field name="arch" type="xml">
+
+
+             <xpath expr="//page[1]" position="attributes"><attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//page[4]" position="attributes"><attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//page[4]" position="after">
+                    <page name="ordonnace" string="Ordonnance">
+
+                    </page>
+
+            </xpath>
+            <xpath expr="//page[@name='internal_notes']" position="after">
+                           <page name="consultations" string="Consultations">
+
+                                   <field name="consultation_id">
+
+
+                            </field>
+
+                           </page>
+            </xpath>
+            <xpath expr="//page[@name='sales_purchases']" position="attributes"><attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='parent_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//button[@name='toggle_active']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='%(crm.crm_lead_opportunities)d']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+
+
+
+            <xpath expr="//button[@name='%(sale.act_res_partner_2_sale_order)d']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+
+             <xpath expr="//field[@name='vat']" position="after">
+                <field name="cin"></field>
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="birthdate_date"></field>
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="assurancemaladie"></field>
+            </xpath>
+            <xpath expr="//field[@name='total_invoiced']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+             <xpath expr="//field[@name='website']" position="replace">
+                 <field name="antecedants"></field>
+             </xpath>
+
+             <xpath expr="//field[@name='title']" position="replace">
+                   <field name="observations"></field>
+             </xpath>
+
+            <xpath expr="//field[@name='category_id']" position="attributes">  <attribute name="invisible">True</attribute>
+             </xpath>
+
+             <xpath expr="//field[@name='lang']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+        </field>
+
+    </record>
+
+
+</odoo>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--
+
+           <record id="action_fichier_form" model="ir.actions.act_window">
+            <field name="name">consultation action</field>
+            <field name="res_model">fiche.patient</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                ajouter une nouvelle fiche
+              </p><p>
+              vous pouvez ajouter une nouvelle fiche pour commencer
+              </p>
+            </field>
+    </record>
+            <record id="action_rdv_form" model="ir.actions.act_window">
+            <field name="name">rdv action</field>
+            <field name="res_model">rdv.patient</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">calendar,tree,kanban,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+               ajouter un rdv au patient
+              </p><p>
+              vous pouvez ajouter  un rdv
+              </p>
+            </field>
+    </record>
+            <record id="action_registre_form" model="ir.actions.act_window">
+            <field name="name">registre action</field>
+            <field name="res_model">registre.patient</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+               inscrire un patient
+              </p><p>
+              vous pouvez ajouter  un patient
+              </p>
+            </field>
+    </record>
+                <record model="ir.actions.act_window" id="rendezvous_list_action">
+            <field name="name">rendez-vous</field>
+            <field name="res_model">rendezvous.patient</field>
+            <field name="view_mode">tree,form,calendar</field>
+        </record>
+ -->
+        <menuitem name="Fichier" id="fichier.menu_root" sequence="0"/>
+    <menuitem name="Liste des patients" id="fichier.menu_1" parent="fichier.menu_root"  action="contacts.action_contacts"/>
+    <!-- <menuitem name="registre" id="fichier.menu_2" parent="fichier.menu_root"  action="action_registre_form"/> -->
+   <!--  <menuitem name="Agenda" id="fichier.menu_3" parent="fichier.menu_root"  action="calendar.action_calendar_event"/> -->
+    <menuitem name="Rendez-Vous" id="fichier.menu_4" parent="fichier.menu_root"  action="calendar.action_calendar_event"/>
+    <menuitem name="Payements" id="fichier.menu_5" parent="fichier.menu_root"  action="account.action_invoice_refund_out_tree"/>
+
+
+    </data>
+</odoo>
