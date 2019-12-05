@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="contacts.action_contacts" model="ir.actions.act_window">
+         <field name="context">{"search_default_customer":1}</field>
+    </record>
+      <record id="view_res_partner_filter_patients" model="ir.ui.view">
+           <field name="name">res.partner.patient.select</field>
+            <field name="model">res.partner</field>
+           <field name="inherit_id" ref="base.view_res_partner_filter"/>
+           <field name="priority">16</field>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='customer']" position="attributes"><attribute name="string">Patients</attribute>
+            </xpath>
+            </field>
+      </record>
     <record model="ir.ui.view" id="partner_view_button_contracts_patient_count">
             <field name="name">partner.patient.view.button.contracts_count</field>
             <field name="model">res.partner</field>
@@ -92,9 +105,23 @@
                 <attribute name="invisible">True</attribute>
             </xpath>
 
+
         </field>
 
     </record>
+    <record id="view_patient_form_inherited" model="ir.ui.view">
+            <field name="name">crm.form.inherited</field>
+            <field name="model">hr.employee</field>
+         <field name="inherit_id" ref="hr.view_employee_form"/>
+           <field name="priority">16</field>
+            <field name="arch" type="xml">
+
+             <xpath expr="//div[@class='oe_chatter']" position="replace">
+
+            </xpath>
+            </field>
+    </record>
+
 
 
 </odoo>

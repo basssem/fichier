@@ -42,6 +42,11 @@
         'views/acte.xml',
         'views/medicament.xml',
         'views/ordonnance.xml',
+        'reports/report.xml',
+        'reports/report_ordonnance.xml',
+     
+
+        'reports/template_header.xml',
 
         'views/ordonnanceligne.xml',
 

@@ -22,6 +22,7 @@ class fiche(models.Model):
      antecedants=fields.Text(string="Antecedants")
      observations=fields.Text(string="Observations")
      consultation_id=fields.One2many('consultation.patient','fiche_id',string="consultation_id")
+     ordonnnaceligne_id=fields.One2many('ordonnanceligne.patient','patient_id',string="Ordonnance")
 
 
 

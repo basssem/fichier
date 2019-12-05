@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+<template id="external_layout_boxed_inherit"
+            inherit_id="web.external_layout_boxed">
+            <xpath expr="//div[@class='header']" position="replace">
+                <div class="header">
+               Cabinet medecine dentaire<br></br>
+                    Dr. Zaafouri Zied<br></br>
+                    Chirurgien dentiste<br></br>
+                    Bir elHafay Sidi Bouzid<br></br>
+                    tel:97976786
+
+                </div>
+            </xpath>
+     <xpath expr="//div[@class='footer o_boxed_footer']" position="replace">
+                <div class="footer">
+                    ____________________________________________________________________________________<br></br>
+                   <h1>Dr. Zaafouri Zied email:zaafouri.zied@yahoo.fr</h1>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

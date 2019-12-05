@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <report
+            id="report_ordonnance_patient"
+            model="consultation.patient"
+            string="imrimer ordonnance"
+            report_type="qweb-pdf"
+            name="fichier.report_ordonnance"
+            file="fichier.report_ordonnance"
+        />
+</odoo>

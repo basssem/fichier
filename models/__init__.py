@@ -7,3 +7,4 @@ from . import payement
 from . import ordonnance
 from . import medicament
 from . import ordonnanceligne
+from . import rendezvous

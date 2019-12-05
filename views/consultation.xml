@@ -27,6 +27,7 @@
                     <sheet>
                         <group>
 
+                     <field name="fiche_id"/>
                      <field name="dateConsulation"/>
                      <field name="diadnostique"/>
                      <field name="examenClinique"/>
